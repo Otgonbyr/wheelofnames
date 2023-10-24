@@ -7,6 +7,9 @@ let button = document.createElement("button")
 
 let alertcontainer = document.createElement("div")
 let alert = document.createElement('div')
+let alerttop = document.createElement('div')
+let alertmiddle = document.createElement('div')
+let alertbtm = document.createElement("div")
 
 container.className = "container"
 wheel.className = "wheel"
@@ -15,6 +18,8 @@ input.className = "input"
 
 alertcontainer.className = "alertcontainer"
 alert.className = "alert"
+alerttop.className = "alerttop"
+alertbtm.className = "alertbtm"
 
 body.appendChild(container)
 container.appendChild(wheel)
@@ -22,13 +27,24 @@ container.appendChild(input)
 container.appendChild(button)
 wheel.appendChild(spin)
 
+body.appendChild(alertcontainer)
+alertcontainer.appendChild(alert)
+alert.appendChild(alerttop)
+alert.appendChild(alertbtm)
+
 body.style.margin = "0"
 
 button.innerText = "get names"
 
-alert.style.width = "500px"
-alert.style.height = "300px"
+alerttop.innerText = "We have a winner!"
+alert.style.width = "640px"
+alert.style.height = "200px"
+alert.style.borderRadius = "15px"
 alert.style.backgroundColor = "red"
+
+alerttop.style.height = "64px"
+alertmiddle.style.height = "85px"
+alertmiddle.style.backgroundColor = "white"
 
 spin.style.display = "flex"
 spin.style.justifyContent = "center"
